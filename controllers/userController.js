@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs'
-import * as jwtUtils from '../utils/jwtUtils'
-import * as userService from '../services/userService'
+import * as jwtUtils from '../utils/jwtUtils.js'
+import * as userService from '../services/userService.js'
 import { successResponse, errorResponse } from '../utils/apiResponse.js'
 
 // สร้างฟังก์ชันสำหรับการลงทะเบียนผู้ใช้ใหม่ โดยสร้างฟังก์ชันชื่อ registerUser
