@@ -2,7 +2,8 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 
 // ใช้ process.cwd() เพื่ออ้างอิงถึง root directory โดยตรง
-dotenv.config({ path: `${process.cwd()}/.env` })
+// dotenv.config({ path: `${process.cwd()}/.env` })
+dotenv.config()
 
 // ฟังก์ชันเชื่อมต่อฐานข้อมูล MongoDB
 const connectDB = async () => {
