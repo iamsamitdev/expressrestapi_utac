@@ -3,7 +3,7 @@ import productModel from '../models/productModel.js'
 // อ่านข้อมูลสินค้าทั้งหมด
 export const getAllProducts = async () => {
   try{
-    const products = await productModel.find()
+    const products = await productModel.find().sort({ createdAt: 'desc' })
     if (!products.length) {
       throw new Error('No products found')
     }
