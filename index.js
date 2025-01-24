@@ -13,6 +13,9 @@ import productRoutes from './routes/productRoutes.js'
 // Import connectDB
 import connectDB from './utils/db.js'
 
+// Import swagger
+import setupSwagger from './utils/swagger.js'
+
 // Load environment variables
 dotenv.config()
 
@@ -21,6 +24,9 @@ const app = express()
 
 // Use JSON middleware
 app.use(express.json())
+
+// Setup Swagger
+setupSwagger(app)
 
 // Use testRoutes
 app.use('/api', testRoutes)
