@@ -62,7 +62,7 @@ export const loginUser = async (req, res) => {
     }
 
     // สร้าง token ด้วยฟังก์ชัน generateToken จากไฟล์ jwtUtils
-    const accessToken = jwtUtils.generateAccessToken(user)
+    const accessToken = jwtUtils.generateAccessToken(user.id)
 
     return res.status(200).json(
       successResponse({
