@@ -10,6 +10,9 @@ import testRoutes from './routes/testRoutes.js'
 // Import productRoutes
 import productRoutes from './routes/productRoutes.js'
 
+// Import userRoutes
+import userRoutes from './routes/userRoutes.js'
+
 // Import connectDB
 import connectDB from './utils/db.js'
 
@@ -33,6 +36,9 @@ app.use('/api', testRoutes)
 
 // Use productRoutes
 app.use('/api/products', productRoutes)
+
+// Use userRoutes
+app.use('/api/users', userRoutes)
 
 // เริ่มต้น server
 const startServer = async () => {
