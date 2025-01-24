@@ -17,6 +17,30 @@ const options = {
         url: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
       },
     ],
+    components: {
+      schemas: {
+        Product: {
+          type: 'object',
+          properties: {
+            id: {
+              type: 'integer',
+              description: 'The product ID',
+              example: 1,
+            },
+            name: {
+              type: 'string',
+              description: 'The product name',
+              example: 'iPhone 12 Pro Max',
+            },
+            price: {
+              type: 'integer',
+              description: 'The price of product',
+              example: '1000',
+            }
+          },
+        },
+      },
+    },
   },
   apis:[
     './routes/*.js',
