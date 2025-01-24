@@ -19,6 +19,9 @@ import connectDB from './utils/db.js'
 // Import swagger
 import setupSwagger from './utils/swagger.js'
 
+// Import CORS
+import cors from 'cors'
+
 // Load environment variables
 dotenv.config()
 
@@ -27,6 +30,16 @@ const app = express()
 
 // Use JSON middleware
 app.use(express.json())
+
+// Middleware for CORS
+app.use(cors(
+  {
+    // origin: 'http://localhost:4200, http://www.example.com, http://127.0.0.1:5500',
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  }
+))
 
 // Setup Swagger
 setupSwagger(app)
